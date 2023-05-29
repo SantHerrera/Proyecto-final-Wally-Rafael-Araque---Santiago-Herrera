@@ -1,0 +1,109 @@
+estado_actual = "INICIO"
+
+objetos_encontrados = []
+
+
+def cambiar_estado(nuevo_estado):
+
+    global estado_actual
+
+    estado_actual = nuevo_estado
+
+
+while True:
+
+    if estado_actual == "INICIO":
+
+        cambiar_estado("EXPLORAR")
+
+   
+
+    elif estado_actual == "EXPLORAR":
+
+        if objeto_encontrado:
+
+            objetos_encontrados.append(objeto_encontrado)
+
+            cambiar_estado("BUSCAR OBJETO")
+
+        elif no_hay_mas_objetos:
+
+            cambiar_estado("MOVERSE A OTRO LUGAR")
+
+   
+
+    elif estado_actual == "BUSCAR OBJETO":
+
+        cambiar_estado("DETECTAR OBJETO")
+
+   
+
+    elif estado_actual == "DETECTAR OBJETO":
+
+        cambiar_estado("AJUSTAR CÁMARA")
+
+   
+
+    elif estado_actual == "AJUSTAR CÁMARA":
+
+        cambiar_estado("DETERMINAR ORIENTACIÓN")
+
+   
+
+    elif estado_actual == "DETERMINAR ORIENTACIÓN":
+
+        cambiar_estado("DETERMINAR CATEGORÍA")
+
+   
+
+    elif estado_actual == "DETERMINAR CATEGORÍA":
+
+        cambiar_estado("MOVER AL OBJETO")
+
+   
+
+    elif estado_actual == "MOVER AL OBJETO":
+
+        cambiar_estado("AGARRAR OBJETO")
+
+   
+
+    elif estado_actual == "AGARRAR OBJETO":
+
+        if objeto_agarrado:
+
+            cambiar_estado("DEPOSITAR EN CONTENEDOR")
+
+        else:
+
+            cambiar_estado("EXPLORAR")
+
+   
+
+    elif estado_actual == "DEPOSITAR EN CONTENEDOR":
+
+        if no_hay_mas_objetos:
+
+            cambiar_estado("RETORNAR A HOME")
+
+        else:
+
+            cambiar_estado("EXPLORAR")
+
+   
+
+    elif estado_actual == "RETORNAR A HOME":
+
+        cambiar_estado("EXPLORAR")
+
+   
+
+    elif estado_actual == "NO HAY MÁS OBJETOS":
+
+        cambiar_estado("MOVERSE A OTRO LUGAR")
+
+   
+
+    elif estado_actual == "MOVERSE A OTRO LUGAR":
+
+        cambiar_estado("EXPLORAR")
