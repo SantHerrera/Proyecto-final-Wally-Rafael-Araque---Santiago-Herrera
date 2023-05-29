@@ -1,0 +1,286 @@
+	_init_.py
+```python
+__all__ = ["Objeto", "DataBase", "Camera", "DistanceSensor", "R.O.B", "Arm", "Containor", "IA"]
+from .Object import Object
+from .DataBase import DataBase
+from .Camera import Camera
+from .DistanceSensor import DistanceSensor
+from .R.O.Bimport R.O.B
+from .Arm import Arm
+from .Containor import Containor
+from .IA import IA
+
+
+•	Garra.py
+```python
+class Arm(object):
+    def __init__(self):
+        self.__position = 0
+        self.__state = ""
+        self.R.O.B = None
+    # Start of user code -> properties/constructors for Arm class
+    # End of user code
+
+    def move_to_position(self):
+        # Start of user code protected zone for move_to_position function body
+        # End of user code
+
+    def open_Arm (self):
+        # Start of user code protected zone for open_Arm function body
+        # End of user code
+
+    def close_Armself):
+        # Start of user code protected zone for close_Arm function body
+        # End of user code
+
+    def measure_object_distance(self):
+        # Start of user code protected zone for measure_object_distance function body
+        raise NotImplementedError
+        # End of user code
+
+    def get_position(self):
+        # Start of user code protected zone for get_position function body
+        return None
+        # End of user code
+
+    def set_position(self):
+        # Start of user code protected zone for set_position function body
+        return None
+        # End of user code
+
+    def get_state(self):
+        # Start of user code protected zone for get_estado function body
+        return None
+        # End of user code
+
+    def set_estado(self):
+        # Start of user code protected zone for set_estado function body
+        return None
+        # End of user code
+
+    # Start of user code -> methods for Arm class
+    # End of user code
+
+
+•	IA.py
+```python
+class IA(object):
+    def __init__(self):
+        self.R.O.B = None
+        self.model = ""
+        self.category_obj = ""
+    # Start of user code -> properties/constructors for IA class
+    # End of user code
+
+    def recognize_object(self):
+        # Start of user code protected zone for recognize_object function body
+        # End of user code
+
+    # Start of user code -> methods for IA class
+    # End of user code
+
+
+•	Object.py
+```python
+class Objeto(object):
+    def __init__(self):
+        self.robot = []
+        self.__position = 0
+        self.__orientation = ""
+        self.__type = ""
+    # Start of user code -> properties/constructors for Object class
+    # End of user code
+
+    def get_object_type(self):
+        # Start of user code protected zone for get_object_type function body
+        # End of user code
+
+    def get_position(self):
+        # Start of user code protected zone for get_position function body
+        # End of user code
+
+    def get_orientation(self):
+        # Start of user code protected zone for get_orientation function body
+        # End of user code
+
+    # Start of user code -> methods for Object class
+    # End of user code
+class Camera(object):
+    def __init__(self):
+        self.__position = 0
+        self.robot = None
+    # Start of user code -> properties/constructors for Camera class
+    # End of user code
+
+    def capture_image(self):
+        # Start of user code protected zone for capture_image function body
+        # End of user code
+
+    def recognize_object(self):
+        # Start of user code protected zone for recognize_object function body
+        # End of user code
+
+    def get_position(self):
+        # Start of user code protected zone for get_position function body
+        return None
+        # End of user code
+
+    def set_position(self):
+        # Start of user code protected zone for set_position function body
+        return None
+        # End of user code
+
+    # Start of user code -> methods for Camera class
+    # End of user code
+
+
+•	R.py
+```python
+class R.O.B(DataBase):
+    def __init__(self):
+        self.Arm = None
+        self.IA = None
+        self.object = []
+        self.__real trayectory = 0
+        self.distance sensor = None
+        self.distance sensor = None
+        self.camera = None
+        self.__actual position = 0
+        self.containor = []
+        self.camera = None
+        self.iA = None
+    # Start of user code -> properties/constructors for R.O.B class
+    # End of user code
+
+    def move(self):
+        # Start of user code protected zone for move function body
+        # End of user code
+
+    def explore(self):
+        # Start of user code protected zone for explore function body
+        # End of user code
+
+    def recognize_object(self):
+        # Start of user code protected zone for recognize_object function body
+        # End of user code
+
+    def adjust_path(self):
+        # Start of user code protected zone for adjust_path function body
+        # End of user code
+
+    def interpret_object(self):
+        # Start of user code protected zone for interpret_object function body
+        # End of user code
+
+    def move_to_object(self):
+        # Start of user code protected zone for move_to_object function body
+        # End of user code
+
+    def grab_object(self):
+        # Start of user code protected zone for grab_object function body
+        # End of user code
+
+    def deposit_in_container(self):
+        # Start of user code protected zone for deposit_in_container function body
+        # End of user code
+
+    def return_to_initial_position(self):
+        # Start of user code protected zone for return_to_initial_position function body
+        # End of user code
+
+    def report_final_operation(self):
+        # Start of user code protected zone for report_final_operation function body
+        # End of user code
+
+    def get_actual_position(self):
+        # Start of user code protected zone for get_actual_position function body
+        return None
+        # End of user code
+
+    def set_actual_position(self):
+        # Start of user code protected zone for set_actual_position function body
+        return None
+        # End of user code
+
+    def get_real_trajectory(self):
+        # Start of user code protected zone for get_real_trajectory function body
+        return None
+        # End of user code
+
+    def set_real_trajectory(self):
+        # Start of user code protected zone for set_real_trajectory function body
+        return None
+        # End of user code
+
+    # Start of user code -> methods for Robot class
+    # End of user code
+
+DistanceSensor.py
+```python
+classDistanceSensor(object):
+    def __init__(self):
+        self.robot = None
+        self.range = 0
+        self.Measure_unit = ""
+    # Start of user code -> properties/constructors for DistanceSensorclass
+    # End of user code
+
+    def measure_Disttance(self):
+        # Start of user code protected zone for measure_Distance function body
+        # End of user code
+
+    # Start of user code -> methods for DistanceSensorclass
+    # End of user code
+
+
+•	DataBase.py
+```python
+class DataBase(object):
+    pass
+    # Start of user code -> properties/constructors for DataBase class
+    # End of user code
+
+    # Start of user code -> methods for DataBase class
+    # End of user code
+
+
+•	Containor.py
+```python
+class Containor(object):
+    def __init__(self):
+        self.robot = []
+        self.__position = 0
+        self.__tipo = ""
+    # Start of user code -> properties/constructors for Containor class
+    # End of user code
+
+    def get_container_type(self):
+        # Start of user code protected zone for get_container_type function body
+        # End of user code
+
+    def get_position(self):
+        # Start of user code protected zone for get_position function body
+        # End of user code
+
+    def get_tipo(self):
+        # Start of user code protected zone for get_type function body
+        return None
+        # End of user code
+
+    def set_type(self):
+        # Start of user code protected zone for set_type function body
+        return None
+        # End of user code
+
+    def get_position(self):
+        # Start of user code protected zone for get_position function body
+        return None
+        # End of user code
+
+    def set_position(self):
+        # Start of user code protected zone for set_position function body
+        return None
+        # End of user code
+
+    # Start of user code -> methods for Containor class
+    # End of user code
